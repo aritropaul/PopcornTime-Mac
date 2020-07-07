@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3056857B24B4A9660097BC64 /* PopcornTorrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3056857A24B4A9650097BC64 /* PopcornTorrent.framework */; platformFilter = maccatalyst; };
-		3056857C24B4A9660097BC64 /* PopcornTorrent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3056857A24B4A9650097BC64 /* PopcornTorrent.framework */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3056BE7724B4BB5E0097BC64 /* PopcornTorrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3056BE7624B4BB5E0097BC64 /* PopcornTorrent.framework */; platformFilter = maccatalyst; };
+		3056BE7824B4BB5E0097BC64 /* PopcornTorrent.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3056BE7624B4BB5E0097BC64 /* PopcornTorrent.framework */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		306669DD24B3111100DBCFB9 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306669DC24B3111100DBCFB9 /* MoviesViewController.swift */; };
 		306669DF24B3200D00DBCFB9 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306669DE24B3200D00DBCFB9 /* MovieModel.swift */; };
 		306669E224B321CD00DBCFB9 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306669E124B321CD00DBCFB9 /* MovieManager.swift */; };
@@ -30,13 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3056857D24B4A9660097BC64 /* Embed Frameworks */ = {
+		3056BE7924B4BB5E0097BC64 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3056857C24B4A9660097BC64 /* PopcornTorrent.framework in Embed Frameworks */,
+				3056BE7824B4BB5E0097BC64 /* PopcornTorrent.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,9 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3056857324B4A8E80097BC64 /* PopcornTorrent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PopcornTorrent.framework; path = ../../../../Desktop/PopcornTorrent.framework; sourceTree = "<group>"; };
-		3056857A24B4A9650097BC64 /* PopcornTorrent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PopcornTorrent.framework; sourceTree = "<group>"; };
-		3056857E24B4AA6E0097BC64 /* GCDWebServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GCDWebServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3056BE7624B4BB5E0097BC64 /* PopcornTorrent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PopcornTorrent.framework; sourceTree = "<group>"; };
 		306669DC24B3111100DBCFB9 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		306669DE24B3200D00DBCFB9 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		306669E124B321CD00DBCFB9 /* MovieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
@@ -78,7 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44D1D5D474F24C7FA2894E19 /* Pods_PopcornTime_Mac.framework in Frameworks */,
-				3056857B24B4A9660097BC64 /* PopcornTorrent.framework in Frameworks */,
+				3056BE7724B4BB5E0097BC64 /* PopcornTorrent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,9 +195,7 @@
 		AC0E0202452A9D1F491C317F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3056857E24B4AA6E0097BC64 /* GCDWebServer.framework */,
-				3056857324B4A8E80097BC64 /* PopcornTorrent.framework */,
-				3056857A24B4A9650097BC64 /* PopcornTorrent.framework */,
+				3056BE7624B4BB5E0097BC64 /* PopcornTorrent.framework */,
 				75FCF9298962E8510019E282 /* Pods_PopcornTime_Mac.framework */,
 			);
 			name = Frameworks;
@@ -217,7 +213,7 @@
 				30D9C65624B271D5009F65A8 /* Frameworks */,
 				30D9C65724B271D5009F65A8 /* Resources */,
 				213AFCAB42E6D86C3BFC3F36 /* [CP] Embed Pods Frameworks */,
-				3056857D24B4A9660097BC64 /* Embed Frameworks */,
+				3056BE7924B4BB5E0097BC64 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

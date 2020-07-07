@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 import XCDYouTubeKit
 import AVKit
+import PopcornTorrent
 
 class MovieDetailViewController: UIViewController {
 
@@ -93,7 +94,19 @@ class MovieDetailViewController: UIViewController {
     
     @IBAction func _720pTapped(_ sender: Any) {
         if let _720p = movie.torrents?.en?["720p"] {
+            let playerViewController = AVPlayerViewController()
             print(_720p.url)
+            let streamer = PTTorrentStreamer()
+            streamer.startStreaming(
+                fromFileOrMagnetLink: _720p.url!,
+                progress: { (status) in
+                print(status)
+            }, readyToPlay: { (file, path) in
+                print(file)
+            }, failure: { (error) in
+                print(error)
+            })
+            print(streamer)
         }
     }
     
