@@ -261,15 +261,15 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-3P-cDt">
-                                <rect key="frame" x="181" y="470" width="518" height="50"/>
+                                <rect key="frame" x="307" y="470" width="267" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr3-Up-KDR">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                                        <state key="normal" title="  Stream 720p" image="eye.fill" catalog="system">
+                                        <state key="normal" title="  Stream" image="eye.fill" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -278,16 +278,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="_720pTapped:" destination="bVV-x9-Uzw" eventType="touchUpInside" id="Gjm-c9-JE9"/>
+                                            <action selector="streamTapped:" destination="bVV-x9-Uzw" eventType="touchUpInside" id="geH-XD-r2t"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30z-ca-UIo">
-                                        <rect key="frame" x="178" y="0.0" width="155" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="141" y="0.0" width="126" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                                        <state key="normal" title="  Stream 1080p" image="eye.fill" catalog="system">
+                                        <state key="normal" title="  Download" image="icloud.and.arrow.down" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -296,25 +296,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="_1080pTapped:" destination="bVV-x9-Uzw" eventType="touchUpInside" id="RHn-of-M9g"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubW-yB-Zd3">
-                                        <rect key="frame" x="363" y="0.0" width="155" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                                        <state key="normal" title="  Stream 2160p" image="eye.fill" catalog="system">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="8"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="_2160pTapped:" destination="bVV-x9-Uzw" eventType="touchUpInside" id="H9A-6L-K9I"/>
+                                            <action selector="downloadTapped:" destination="bVV-x9-Uzw" eventType="touchUpInside" id="J3c-ri-FlL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -379,7 +361,7 @@
                             <constraint firstItem="s1B-Jb-yvz" firstAttribute="bottom" secondItem="dtV-3P-cDt" secondAttribute="bottom" constant="80" id="1QO-hC-o91"/>
                             <constraint firstItem="ycY-CF-ny1" firstAttribute="trailing" secondItem="s1B-Jb-yvz" secondAttribute="trailing" id="32E-x1-uFI"/>
                             <constraint firstItem="dc6-Ht-POj" firstAttribute="leading" secondItem="UWV-k5-jC6" secondAttribute="leading" id="6Cl-Lf-61t"/>
-                            <constraint firstItem="ycY-CF-ny1" firstAttribute="top" secondItem="s1B-Jb-yvz" secondAttribute="top" id="8DT-e1-171"/>
+                            <constraint firstItem="ycY-CF-ny1" firstAttribute="top" secondItem="LGf-l7-Qqy" secondAttribute="top" id="8DT-e1-171"/>
                             <constraint firstItem="dc6-Ht-POj" firstAttribute="top" secondItem="UWV-k5-jC6" secondAttribute="bottom" constant="20" id="8Fc-x3-be3"/>
                             <constraint firstItem="Qrf-oX-Rvb" firstAttribute="leading" secondItem="s1B-Jb-yvz" secondAttribute="leading" id="BsE-OM-o2Z"/>
                             <constraint firstItem="F7y-2A-94x" firstAttribute="top" secondItem="UWV-k5-jC6" secondAttribute="top" constant="10" id="EHh-di-Uiq"/>
@@ -399,17 +381,16 @@
                             <constraint firstItem="z69-MX-9dL" firstAttribute="leading" secondItem="UWV-k5-jC6" secondAttribute="trailing" constant="20" id="k54-Qv-HZH"/>
                             <constraint firstItem="UnI-LA-yPg" firstAttribute="top" secondItem="s1B-Jb-yvz" secondAttribute="top" constant="40" id="lO2-fQ-TeV"/>
                             <constraint firstItem="0Nq-sS-XGP" firstAttribute="leading" secondItem="UWV-k5-jC6" secondAttribute="trailing" constant="20" id="o86-ij-ohg"/>
-                            <constraint firstItem="Qrf-oX-Rvb" firstAttribute="top" secondItem="s1B-Jb-yvz" secondAttribute="top" id="vFO-1R-mfX"/>
+                            <constraint firstItem="Qrf-oX-Rvb" firstAttribute="top" secondItem="LGf-l7-Qqy" secondAttribute="top" id="vFO-1R-mfX"/>
                             <constraint firstItem="UnI-LA-yPg" firstAttribute="leading" secondItem="s1B-Jb-yvz" secondAttribute="leading" constant="40" id="yWp-0l-6eC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s1B-Jb-yvz"/>
                     </view>
                     <connections>
-                        <outlet property="button1080p" destination="30z-ca-UIo" id="WLL-ks-wtX"/>
-                        <outlet property="button2160p" destination="ubW-yB-Zd3" id="j9M-p9-nzh"/>
-                        <outlet property="button720p" destination="Wr3-Up-KDR" id="JDr-xk-iU1"/>
+                        <outlet property="downloadButton" destination="30z-ca-UIo" id="5X9-DZ-lBx"/>
                         <outlet property="movieBannerView" destination="ycY-CF-ny1" id="3Uf-8s-Rjb"/>
                         <outlet property="moviePosterView" destination="UWV-k5-jC6" id="DUR-72-rmA"/>
+                        <outlet property="streamButton" destination="Wr3-Up-KDR" id="vkK-tB-ZdN"/>
                         <outlet property="synopsisLabel" destination="z69-MX-9dL" id="Uz9-Bq-gKI"/>
                         <outlet property="titleLabel" destination="F7y-2A-94x" id="t4K-a8-Km6"/>
                         <outlet property="yearLabel" destination="0Nq-sS-XGP" id="l1y-vH-ABC"/>

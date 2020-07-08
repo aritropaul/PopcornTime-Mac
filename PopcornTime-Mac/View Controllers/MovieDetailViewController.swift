@@ -19,9 +19,8 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var youtubeButton: UIButton!
-    @IBOutlet weak var button2160p: UIButton!
-    @IBOutlet weak var button1080p: UIButton!
-    @IBOutlet weak var button720p: UIButton!
+    @IBOutlet weak var downloadButton: UIButton!
+    @IBOutlet weak var streamButton: UIButton!
     @IBOutlet weak var moviePosterView: UIImageView!
     
     override func viewDidLoad() {
@@ -32,7 +31,6 @@ class MovieDetailViewController: UIViewController {
         titleLabel.text = movie.title
         yearLabel.text = movie.year
         synopsisLabel.text = movie.synopsis
-        setupTorrentButtons()
     }
     
     func setupYouTubeURL() {
@@ -62,27 +60,35 @@ class MovieDetailViewController: UIViewController {
     }
     
     
-    func setupTorrentButtons() {
-        if let _720p = movie.torrents?.en?["720p"] {
-            //
+    func showQualityOptions(completion: @escaping(String?)->Void) {
+        let alert = UIAlertController(title: movie.title, message: "Select a quality", preferredStyle: .alert)
+//        alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
+        if let keys = movie.torrents?.en?.keys {
+            for key in keys {
+                alert.addAction(UIAlertAction(title: key, style: .default, handler: { (action) in
+                    completion(key)
+                }))
+            }
         }
-        else {
-            button720p.isHidden = true
-        }
-        if let _1080p = movie.torrents?.en?["1080p"] {
-            //
-        }
-        else {
-            button1080p.isHidden = true
-        }
-        if let _2160p = movie.torrents?.en?["2160p"] {
-            //            
-        }
-        else {
-            button2160p.isHidden = true
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
+            completion(nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func streamTapped(_ sender: Any) {
+        showQualityOptions { (quality) in
+            // TODO : Stream with selected quality
         }
     }
-
+    
+    @IBAction func downloadTapped(_ sender: Any) {
+        showQualityOptions { (quality) in
+            // TODO : Download with selected quality
+        }
+    }
+    
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -91,21 +97,5 @@ class MovieDetailViewController: UIViewController {
         setupYouTubeURL()
     }
     
-    @IBAction func _720pTapped(_ sender: Any) {
-        if let _720p = movie.torrents?.en?["720p"] {
-            print(_720p.url)
-        }
-    }
-    
-    @IBAction func _1080pTapped(_ sender: Any) {
-        if let _1080p = movie.torrents?.en?["1080p"] {
-            print(_1080p.url)
-        }
-    }
-    
-    @IBAction func _2160pTapped(_ sender: Any) {
-        if let _2160p = movie.torrents?.en?["2160p"] {
-            print(_2160p.url)
-        }
-    }
+
 }

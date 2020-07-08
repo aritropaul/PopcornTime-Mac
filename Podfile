@@ -12,5 +12,4 @@ target 'PopcornTime-Mac' do
   pod 'Just'  
   pod 'XCDYouTubeKit'
   pod 'GCDWebServer'
-  pod 'RealmSwift'
 end
