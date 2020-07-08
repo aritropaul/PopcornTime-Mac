@@ -6,25 +6,17 @@ PODS:
   - Kingfisher (5.13.4):
     - Kingfisher/Core (= 5.13.4)
   - Kingfisher/Core (5.13.4)
-  - Realm (5.2.0):
-    - Realm/Headers (= 5.2.0)
-  - Realm/Headers (5.2.0)
-  - RealmSwift (5.2.0):
-    - Realm (= 5.2.0)
   - XCDYouTubeKit (2.14.0)
 
 DEPENDENCIES:
   - GCDWebServer
   - Just
   - Kingfisher
-  - RealmSwift
   - XCDYouTubeKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - GCDWebServer
-    - Realm
-    - RealmSwift
     - XCDYouTubeKit
   trunk:
     - Just
@@ -34,10 +26,8 @@ SPEC CHECKSUMS:
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   Just: aef5105fb2c7069b65aa6f21aec8f429057f9c19
   Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
-  Realm: f749c723e272f08fdf1939af5e61d2bd09b203e8
-  RealmSwift: bf0ab78b52c5bafba8b3ad73be8dfb4c1ea5cf01
   XCDYouTubeKit: 04a2f89dca6c5c53d1786701a0e98dcb484be7a8
 
-PODFILE CHECKSUM: a4426db2b5c5c4843341c763f9a250de1bf18c6b
+PODFILE CHECKSUM: f658fc09e921b1980ecbd8c83d5881df6fef091a
 
 COCOAPODS: 1.9.3

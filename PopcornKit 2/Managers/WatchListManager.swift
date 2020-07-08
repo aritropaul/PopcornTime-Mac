@@ -8,6 +8,22 @@
 
 import Foundation
 
-class WatchListManager{
+
+
+class WatchListManager:{
+    func loadItems(){
+        
+    }
     
+    func saveItem(){
+        
+    }
+    
+    func deleteItem(){
+        
+    }
+    
+    func saveFailed()
 }
+
+
