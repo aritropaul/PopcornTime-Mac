@@ -28,7 +28,7 @@ class MenuViewController: UITableViewController {
         
         if let navVC = self.parent as? UINavigationController {
             if let splitVC = navVC.parent as? UISplitViewController {
-                splitVC.primaryBackgroundStyle = .sidebar
+//                splitVC.primaryBackgroundStyle = .sidebar
                 if let detailVC = splitVC.children[1] as? UINavigationController {
                     detailVC.viewControllers = [UIViewController()]
                     detailVC.viewControllers[0].title = ""
@@ -53,6 +53,8 @@ class MenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
         cell.titleLabel.text = menu[indexPath.row]
+        cell.titleLabel.textColor = .label
+        cell.icon.tintColor = .label
         cell.icon.image = UIImage(systemName: menuIcons[indexPath.row])
         cell.selectedView.layer.cornerRadius = 8
         cell.selectedView.backgroundColor = .clear
@@ -63,6 +65,8 @@ class MenuViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
         cell.isSelected = true
         cell.selectedView.backgroundColor = .systemIndigo
+        cell.titleLabel.textColor = .white
+        cell.icon.tintColor = .white
         selectedIndex = indexPath.row
         if let navVC = self.parent as? UINavigationController {
             if let splitVC = navVC.parent as? UISplitViewController {
@@ -80,6 +84,8 @@ class MenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! MenuTableViewCell
         cell.selectedView.backgroundColor = .clear
+        cell.titleLabel.textColor = .label
+        cell.icon.tintColor = .label
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

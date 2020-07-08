@@ -9,11 +9,11 @@
 import UIKit
 
 class SplitViewController: UISplitViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        splitViewController?.primaryBackgroundStyle = .sidebar
+        self.primaryBackgroundStyle = .sidebar
         // Do any additional setup after loading the view.
     }
-
+    
 }
