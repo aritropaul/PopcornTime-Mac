@@ -30,6 +30,7 @@
 		30D9C66924B271D8009F65A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D9C66724B271D8009F65A8 /* LaunchScreen.storyboard */; };
 		44D1D5D474F24C7FA2894E19 /* Pods_PopcornTime_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FCF9298962E8510019E282 /* Pods_PopcornTime_Mac.framework */; platformFilter = ios; };
 		7801694724B5D651000DCDB9 /* WatchListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7801694624B5D651000DCDB9 /* WatchListManager.swift */; };
+		781FD39B24B5EA3F001D9E96 /* core.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 781FD39924B5EA3F001D9E96 /* core.xcdatamodeld */; };
 		78850E2424B4C142007D4338 /* WatchListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78850E2324B4C142007D4338 /* WatchListModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		69A6ED5BDAC08BB9B8276A82 /* Pods-PopcornTime-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTime-Mac.release.xcconfig"; path = "Target Support Files/Pods-PopcornTime-Mac/Pods-PopcornTime-Mac.release.xcconfig"; sourceTree = "<group>"; };
 		75FCF9298962E8510019E282 /* Pods_PopcornTime_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopcornTime_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7801694624B5D651000DCDB9 /* WatchListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListManager.swift; sourceTree = "<group>"; };
+		781FD39A24B5EA3F001D9E96 /* core.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = core.xcdatamodel; sourceTree = "<group>"; };
 		78850E2324B4C142007D4338 /* WatchListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListModel.swift; sourceTree = "<group>"; };
 		A832CF6622917919077E7CEA /* Pods-PopcornTime-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTime-Mac.debug.xcconfig"; path = "Target Support Files/Pods-PopcornTime-Mac/Pods-PopcornTime-Mac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 				30D9C65C24B271D5009F65A8 /* AppDelegate.swift */,
 				30D9C65E24B271D5009F65A8 /* SceneDelegate.swift */,
 				30D9C66224B271D5009F65A8 /* Main.storyboard */,
+				781FD39924B5EA3F001D9E96 /* core.xcdatamodeld */,
 				30D4AC3224B356030076C607 /* View Controllers */,
 				30D4AC3324B3560E0076C607 /* Extension */,
 				30D4AC3424B356160076C607 /* Views */,
@@ -345,6 +348,7 @@
 				306669DF24B3200D00DBCFB9 /* MovieModel.swift in Sources */,
 				3056BE7B24B4D03B0097BC64 /* ShowDetailViewController.swift in Sources */,
 				30D9C65D24B271D5009F65A8 /* AppDelegate.swift in Sources */,
+				781FD39B24B5EA3F001D9E96 /* core.xcdatamodeld in Sources */,
 				308A14FB24B45C5B009DFA51 /* MovieDetailViewController.swift in Sources */,
 				306669E224B321CD00DBCFB9 /* MovieManager.swift in Sources */,
 				30D4AC2D24B346D00076C607 /* ShowModel.swift in Sources */,
@@ -570,6 +574,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		781FD39924B5EA3F001D9E96 /* core.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				781FD39A24B5EA3F001D9E96 /* core.xcdatamodel */,
+			);
+			currentVersion = 781FD39A24B5EA3F001D9E96 /* core.xcdatamodel */;
+			path = core.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30D9C65124B271D5009F65A8 /* Project object */;
 }
