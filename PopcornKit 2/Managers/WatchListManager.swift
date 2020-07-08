@@ -7,7 +7,22 @@
 //
 
 import Foundation
+import CoreData
 
 class WatchListManager{
+    func loadItems(){
+        
+    }
     
+    func saveItem(){
+        
+    }
+    
+    func deleteItem(){
+        
+    }
+    
+    func saveFailed(){}
 }
+
+
