@@ -141,7 +141,7 @@ extension ShowDetailViewController : UITableViewDelegate, UITableViewDataSource,
         if let keys = episode.torrents?.keys {
             for key in keys {
                 if key == "0" {
-                    alert.addAction(UIAlertAction(title: "Undefined", style: .default, handler: { (action) in
+                    alert.addAction(UIAlertAction(title: "Unknown Quality", style: .default, handler: { (action) in
                         selectedQuality = key
                     }))
                 }
@@ -153,6 +153,11 @@ extension ShowDetailViewController : UITableViewDelegate, UITableViewDataSource,
             }
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        if alert.actions.count <= 3 {
+            let emptyAction = UIAlertAction(title: "", style: .default, handler: nil)
+            emptyAction.isEnabled = false
+            alert.addAction(emptyAction)
+        }
         self.present(alert, animated: true)
         //TODO :- Stream Torrents
     }
@@ -164,7 +169,7 @@ extension ShowDetailViewController : UITableViewDelegate, UITableViewDataSource,
         if let keys = episode.torrents?.keys {
             for key in keys {
                 if key == "0" {
-                    alert.addAction(UIAlertAction(title: "Undefined", style: .default, handler: { (action) in
+                    alert.addAction(UIAlertAction(title: "Unknown Quality", style: .default, handler: { (action) in
                         selectedQuality = key
                     }))
                 }
@@ -176,6 +181,13 @@ extension ShowDetailViewController : UITableViewDelegate, UITableViewDataSource,
             }
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        if alert.actions.count <= 3 {
+            let emptyAction = UIAlertAction(title: "", style: .destructive, handler: nil)
+            emptyAction.isEnabled = false
+            alert.addAction(emptyAction)
+        }
+        
         self.present(alert, animated: true)
         //TODO :- Download Torrents
     }

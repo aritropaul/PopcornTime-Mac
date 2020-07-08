@@ -25,6 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             titlebar.toolbar = nil
         }
         
+        let window = UIWindow(windowScene: windowScene)
+        
         UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.forEach { windowScene in
             windowScene.sizeRestrictions?.minimumSize = CGSize(width: 800, height: 600)
         }

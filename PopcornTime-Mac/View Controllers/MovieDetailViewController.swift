@@ -62,7 +62,6 @@ class MovieDetailViewController: UIViewController {
     
     func showQualityOptions(completion: @escaping(String?)->Void) {
         let alert = UIAlertController(title: movie.title, message: "Select a quality", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "", style: .default, handler: nil))
         if let keys = movie.torrents?.en?.keys {
             for key in keys {
                 alert.addAction(UIAlertAction(title: key, style: .default, handler: { (action) in
@@ -73,7 +72,7 @@ class MovieDetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             completion(nil)
         }))
-        
+        alert.modalPresentationStyle = .pageSheet
         self.present(alert, animated: true, completion: nil)
     }
     
