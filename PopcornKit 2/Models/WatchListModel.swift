@@ -8,11 +8,13 @@
 
 import Foundation
 
+enum Type:String{
+    case show
+    case movie
+}
+
 struct WatchListModel{
-    enum type:String{
-        case show
-        case movie
-    }
+    var type : Type?
     var id, imdbID, tvdbID, title: String?
     var numSeasons, episode: Int?
     var released: Int?

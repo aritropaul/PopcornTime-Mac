@@ -19,6 +19,10 @@
 		308A14FD24B46304009DFA51 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308A14FC24B46304009DFA51 /* UIViewController+Extensions.swift */; };
 		30CB450124B5F75B00C6C68E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB450024B5F75B00C6C68E /* SplitViewController.swift */; };
 		30CB450324B5FBEA00C6C68E /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB450224B5FBEA00C6C68E /* MenuTableViewCell.swift */; };
+		30CB450524B61AC100C6C68E /* WatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB450424B61AC100C6C68E /* WatchListViewController.swift */; };
+		30CB450724B61AD100C6C68E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB450624B61AD100C6C68E /* SearchViewController.swift */; };
+		30CB450924B6537000C6C68E /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB450824B6537000C6C68E /* SearchHeaderView.swift */; };
+		30CB450B24B6638200C6C68E /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB450A24B6638200C6C68E /* UITextView+Extensions.swift */; };
 		30D4AC2724B327360076C607 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D4AC2624B327360076C607 /* MovieCollectionViewCell.swift */; };
 		30D4AC2924B32EC60076C607 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D4AC2824B32EC60076C607 /* MenuViewController.swift */; };
 		30D4AC2B24B346670076C607 /* ShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D4AC2A24B346670076C607 /* ShowsViewController.swift */; };
@@ -64,6 +68,10 @@
 		308A14FC24B46304009DFA51 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		30CB450024B5F75B00C6C68E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		30CB450224B5FBEA00C6C68E /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		30CB450424B61AC100C6C68E /* WatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListViewController.swift; sourceTree = "<group>"; };
+		30CB450624B61AD100C6C68E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		30CB450824B6537000C6C68E /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
+		30CB450A24B6638200C6C68E /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		30D4AC2624B327360076C607 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		30D4AC2824B32EC60076C607 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		30D4AC2A24B346670076C607 /* ShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +148,8 @@
 		30D4AC3224B356030076C607 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				30CB450424B61AC100C6C68E /* WatchListViewController.swift */,
+				30CB450624B61AD100C6C68E /* SearchViewController.swift */,
 				3056BE7A24B4D03B0097BC64 /* ShowDetailViewController.swift */,
 				30D4AC2824B32EC60076C607 /* MenuViewController.swift */,
 				30CB450024B5F75B00C6C68E /* SplitViewController.swift */,
@@ -155,6 +165,7 @@
 			children = (
 				30D4AC3024B34C050076C607 /* UIStoryboard+Extensions.swift */,
 				308A14FC24B46304009DFA51 /* UIViewController+Extensions.swift */,
+				30CB450A24B6638200C6C68E /* UITextView+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 				30CB450224B5FBEA00C6C68E /* MenuTableViewCell.swift */,
 				30D4AC2624B327360076C607 /* MovieCollectionViewCell.swift */,
 				3056BE7C24B50FCC0097BC64 /* EpisodeTableViewCell.swift */,
+				30CB450824B6537000C6C68E /* SearchHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,11 +371,15 @@
 				308A14FB24B45C5B009DFA51 /* MovieDetailViewController.swift in Sources */,
 				306669E224B321CD00DBCFB9 /* MovieManager.swift in Sources */,
 				30D4AC2D24B346D00076C607 /* ShowModel.swift in Sources */,
+				30CB450B24B6638200C6C68E /* UITextView+Extensions.swift in Sources */,
+				30CB450924B6537000C6C68E /* SearchHeaderView.swift in Sources */,
 				78850E2424B4C142007D4338 /* WatchListModel.swift in Sources */,
 				30D4AC3124B34C050076C607 /* UIStoryboard+Extensions.swift in Sources */,
+				30CB450724B61AD100C6C68E /* SearchViewController.swift in Sources */,
 				306669DD24B3111100DBCFB9 /* MoviesViewController.swift in Sources */,
 				30D4AC2724B327360076C607 /* MovieCollectionViewCell.swift in Sources */,
 				308A14FD24B46304009DFA51 /* UIViewController+Extensions.swift in Sources */,
+				30CB450524B61AC100C6C68E /* WatchListViewController.swift in Sources */,
 				30CB450124B5F75B00C6C68E /* SplitViewController.swift in Sources */,
 				30D9C65F24B271D5009F65A8 /* SceneDelegate.swift in Sources */,
 				7801694724B5D651000DCDB9 /* WatchListManager.swift in Sources */,

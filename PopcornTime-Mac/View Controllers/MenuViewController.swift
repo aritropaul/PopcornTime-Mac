@@ -12,6 +12,8 @@ class MenuViewController: UITableViewController {
     
     var moviesVC = MoviesViewController.instantiate(from: .main)
     var showsVC = ShowsViewController.instantiate(from: .main)
+    var watchVC = WatchListViewController.instantiate(from: .main)
+    var searchVC = SearchViewController.instantiate(from: .main)
     
     var selectedIndex = 0
     
@@ -22,7 +24,7 @@ class MenuViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = [moviesVC, showsVC]
+        viewControllers = [moviesVC, showsVC, watchVC, searchVC]
         
         if let navVC = self.parent as? UINavigationController {
             if let splitVC = navVC.parent as? UISplitViewController {

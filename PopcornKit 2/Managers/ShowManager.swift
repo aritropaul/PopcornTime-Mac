@@ -38,4 +38,17 @@ class ShowManager {
         }
     }
     
+    func searchShow(page: Int, keyword: String, completion: @escaping(Result<[Show], Error>)->Void) {
+        Just.get(Endpoints.Show.shows+String(page)+Endpoints.Show.search+keyword) { (r) in
+            if r.ok {
+                let shows = try? JSONDecoder().decode([Show].self, from: r.content ?? Data())
+                completion(.success(shows ?? [Show]()))
+            }
+            else {
+                print(r.error)
+                completion(.failure(r.error!))
+            }
+        }
+    }
+    
 }

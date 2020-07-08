@@ -66,6 +66,11 @@ class ShowsViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath) as! MovieCollectionViewCell
         let show = shows[indexPath.item]
+        if indexPath.item == shows.count - 5 {
+            print(page)
+            page = page + 1
+            loadShows(atPage: page)
+        }
         cell.moviePoster.kf.setImage(with: URL(string: show.images?.poster ?? ""))
         cell.moviePoster.layer.cornerRadius = 8
         cell.moviePoster.contentMode = .scaleAspectFit

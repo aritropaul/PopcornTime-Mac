@@ -69,9 +69,17 @@ class MovieDetailViewController: UIViewController {
                 }))
             }
         }
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             completion(nil)
         }))
+        
+        if alert.actions.count <= 3 {
+            let emptyAction = UIAlertAction(title: "", style: .default, handler: nil)
+            emptyAction.isEnabled = false
+            alert.addAction(emptyAction)
+        }
+        
         alert.modalPresentationStyle = .pageSheet
         self.present(alert, animated: true, completion: nil)
     }
