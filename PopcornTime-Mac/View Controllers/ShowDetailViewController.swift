@@ -134,53 +134,25 @@ extension ShowDetailViewController : UITableViewDelegate, UITableViewDataSource,
         return 90
     }
     
-    func didRequestStream(episode: Episode) {
-        print("Requested Stream")
-        var selectedQuality = String()
+    func showQualityOptions(episode: Episode, completion: @escaping(String?)->Void) {
         let alert = UIAlertController(title: episode.title, message: "Select a quality", preferredStyle: .alert)
         if let keys = episode.torrents?.keys {
             for key in keys {
                 if key == "0" {
                     alert.addAction(UIAlertAction(title: "Unknown Quality", style: .default, handler: { (action) in
-                        selectedQuality = key
+                        completion(key)
                     }))
                 }
                 else {
                     alert.addAction(UIAlertAction(title: key, style: .default, handler: { (action) in
-                        selectedQuality = key
+                        completion(key)
                     }))
                 }
             }
         }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        if alert.actions.count <= 3 {
-            let emptyAction = UIAlertAction(title: "", style: .default, handler: nil)
-            emptyAction.isEnabled = false
-            alert.addAction(emptyAction)
-        }
-        self.present(alert, animated: true)
-        //TODO :- Stream Torrents
-    }
-    
-    func didRequestDownload(episode: Episode) {
-        print("Requested Download")
-        var selectedQuality = String()
-        let alert = UIAlertController(title: episode.title, message: "Select a quality", preferredStyle: .alert)
-        if let keys = episode.torrents?.keys {
-            for key in keys {
-                if key == "0" {
-                    alert.addAction(UIAlertAction(title: "Unknown Quality", style: .default, handler: { (action) in
-                        selectedQuality = key
-                    }))
-                }
-                else {
-                    alert.addAction(UIAlertAction(title: key, style: .default, handler: { (action) in
-                        selectedQuality = key
-                    }))
-                }
-            }
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in
+            completion(nil)
+        }))
         
         if alert.actions.count <= 3 {
             let emptyAction = UIAlertAction(title: "", style: .destructive, handler: nil)
@@ -189,7 +161,22 @@ extension ShowDetailViewController : UITableViewDelegate, UITableViewDataSource,
         }
         
         self.present(alert, animated: true)
-        //TODO :- Download Torrents
+    }
+    
+    func didRequestStream(episode: Episode) {
+        print("Requested Stream")
+        showQualityOptions(episode: episode) { (quality) in
+            //TODO :- Stream Torrents with quality
+            print(quality)
+        }
+    }
+    
+    func didRequestDownload(episode: Episode) {
+        print("Requested Download")
+        showQualityOptions(episode: episode) { (quality) in
+            //TODO :- Download Torrents with quality
+            print(quality)
+        }
     }
     
 }

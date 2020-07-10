@@ -88,6 +88,10 @@ class MoviesViewController: UICollectionViewController, UICollectionViewDelegate
             loadMovies(atPage: page)
         }
         cell.moviePoster.kf.setImage(with: URL(string: movie.images?.poster ?? ""))
+        if cell.moviePoster.image == nil {
+            cell.moviePoster.image = UIImage(named: "Empty-Movie")
+            cell.moviePoster.contentMode = .scaleAspectFill
+        }
         cell.moviePoster.layer.cornerRadius = 8
         cell.moviePoster.contentMode = .scaleAspectFit
         cell.titleLabel.text = movie.title

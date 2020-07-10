@@ -32,7 +32,12 @@ class ShowsViewController: UICollectionViewController {
         ShowManager.shared.loadShows(page: atPage) { (result) in
             switch result {
             case .success(let shows):
-                self.shows = shows
+                if self.page == 1 {
+                    self.shows = shows
+                }
+                else {
+                    self.shows += shows
+                }
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
@@ -72,6 +77,10 @@ class ShowsViewController: UICollectionViewController {
             loadShows(atPage: page)
         }
         cell.moviePoster.kf.setImage(with: URL(string: show.images?.poster ?? ""))
+        if cell.moviePoster.image == nil {
+            cell.moviePoster.image = UIImage(named: "Empty-TV")
+            cell.moviePoster.contentMode = .scaleAspectFill
+        }
         cell.moviePoster.layer.cornerRadius = 8
         cell.moviePoster.contentMode = .scaleAspectFit
         cell.titleLabel.text = show.title

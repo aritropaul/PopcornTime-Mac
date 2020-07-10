@@ -87,6 +87,8 @@ class MovieDetailViewController: UIViewController {
     @IBAction func streamTapped(_ sender: Any) {
         showQualityOptions { (quality) in
             // TODO : Stream with selected quality
+            let magnetURI = self.movie.torrents?.en?[quality ?? ""]?.url
+            
         }
     }
     
